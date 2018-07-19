@@ -208,6 +208,10 @@
     <Compile Include="Migrations\201807180143562_Added Comments.Designer.cs">
       <DependentUpon>201807180143562_Added Comments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807190107538_User Roles.cs" />
+    <Compile Include="Migrations\201807190107538_User Roles.Designer.cs">
+      <DependentUpon>201807190107538_User Roles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -298,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807180143562_Added Comments.resx">
       <DependentUpon>201807180143562_Added Comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807190107538_User Roles.resx">
+      <DependentUpon>201807190107538_User Roles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
