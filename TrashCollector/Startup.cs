@@ -18,16 +18,16 @@ namespace TrashCollector
         {
             ApplicationDbContext context = new ApplicationDbContext();
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-            if (!roleManager.RoleExists("Vistor"))
+            if (!roleManager.RoleExists("Customer"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Visitor";
+                role.Name = "Customer";
                 roleManager.Create(role);
             }
-            if (!roleManager.RoleExists("Admin"))
+            if (!roleManager.RoleExists("Employee"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Admin";
+                role.Name = "Employee";
                 roleManager.Create(role);
             }
         }
