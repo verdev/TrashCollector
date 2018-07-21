@@ -163,11 +163,11 @@ namespace TrashCollector.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
                     await this.UserManager.AddToRolesAsync(user.Id, model.UserRole);
-                    //conditional to check role and send to appropriate create action
-                    // if(UserRole="Customer"){
-                    //Redirect to customer create form
-                    // if (userRole = "employee") {
-                    //redirect to emploiyee create form
+                    if (UserManager.IsInRole(user.Id, "Customer"))
+                    {
+                        return RedirectToAction("Create", "Customers");
+                    }
+
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

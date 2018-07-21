@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace TrashCollector.Models
 {
-    public class Customer
+    public class Employee
     {
         [Key]
         public int Id { get; set; }
-        public string UserId { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
@@ -31,17 +29,9 @@ namespace TrashCollector.Models
         public int Zip { get; set; }
         [Required]
         public string Phone { get; set; }
-        [ForeignKey("DayOfWeek")]
-        [Display(Name = "Requested Weekly Pickup Day")]
-        public int DoWId { get; set; }
-        public DayOfWeek DayOfWeek { get; set; }
-        [Display(Name = "Special Pickup Request Date")]
-        public DateTime?  SpecialPUDate { get; set; }
-        [Display(Name = "Suspend Services Start Date")]
-        public DateTime? SuspendStartDate { get; set; }
-        [Display(Name = "Suspend Services End Date")]
-        public DateTime? SuspendEndDate { get; set; }
-        public double Balance { get; set; }
+
+
+
 
 
 
