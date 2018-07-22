@@ -167,6 +167,10 @@ namespace TrashCollector.Controllers
                     {
                         return RedirectToAction("Create", "Customers");
                     }
+                    else if (UserManager.IsInRole(user.Id, "Employee"))
+                    {
+                        return RedirectToAction("Create", "Employees");
+                    }
 
                     return RedirectToAction("Index", "Home");
                 }
